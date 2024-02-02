@@ -4,11 +4,6 @@
 # testdsv
 # testxml  
 
-
-#Amy Lee
-#Kalon Moco
-
-
 CC=gcc
 CXX=g++
 

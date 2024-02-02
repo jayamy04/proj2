@@ -4,7 +4,7 @@
 # testdsv
 # testxml  
 
-
+//comment 
 
 CC=gcc
 CXX=g++

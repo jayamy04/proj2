@@ -38,7 +38,7 @@ $(BIN_DIR)/teststrdatasource:$(OBJ_DIR)/StringDataSource.o $(OBJ_DIR)/StringData
 $(OBJ_DIR)/StringDataSource.o: $(SRC_DIR)/StringDataSource.cpp $(INC_DIR)/StringDataSource.h $(INC_DIR)/DataSource.h
 	$(CXX) -o $(OBJ_DIR)/StringDataSource.o -c $(CXXFLAGS) $(SRC_DIR)/StringDataSource.cpp
 
-$(OBJ_DIR)/StringDataSourceTest.o: $(TEST_SRC_DIR)/StringDataSourceTest.cpp $(INC_DIR)/StringDataSource.h $(INC_DIR)/StringDataSource.h $(INC_DIR)/DataSource
+$(OBJ_DIR)/StringDataSourceTest.o: $(TEST_SRC_DIR)/StringDataSourceTest.cpp $(INC_DIR)/StringDataSource.h $(INC_DIR)/StringDataSource.h $(INC_DIR)/DataSource.h
 	$(CXX) -o $(OBJ_DIR)/StringDataSourceTest.o  -c $(CXXFLAGS) $(TEST_SRC_DIR)/StringDataSourceTest.cpp
 
 clean:

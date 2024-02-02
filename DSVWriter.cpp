@@ -2,7 +2,7 @@
 
 struct CDSVWriter::SImplementation {
     SImplementation(std::shared_ptr< CDataSink > sink, char delimiter, bool quoteall) {
-        //Details here
+        
     }
 
     bool WriteRow(const std::vector<std::string> &row) {

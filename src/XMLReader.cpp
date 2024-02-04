@@ -5,7 +5,20 @@ struct CXMLReader::SImplementation{
     std::shared_ptr< CDataSource > DDataSource;
     XML_Parser DXMLParser;
 
-    void XML_StartElementHandlerCallBack(void *userData, const XML_Char *name, const XML_Char **atts);
+    void StartElementHandler(const std::string &name, const std::vector<std::string> &attrs){
+
+    }
+
+    static void XML_StartElementHandlerCallBack(void *userData, const XML_Char *name, const XML_Char **atts);
+        SInplementation *ReaderObject = static_cast<SImplementation *>(context);
+
+    static void EndElementHandlerCallBack(void *context, const) XML_Char *name){
+
+    };
+
+    static void CharacterDataHandlerCallback(void *context, const XML_Char *s, int len){
+
+    };
 
     SImplementation(std::shared_ptr< CDataSource > src){
         DDataSource = src;
@@ -18,7 +31,7 @@ struct CXMLReader::SImplementation{
 
     };
 
-    bool ReadEntity(SXMLEntity &entity, bool skipdata){
+    bool ReadEntity(SXMLEntity &entity, bool skipcdata){
 
     };
 };

@@ -5,7 +5,7 @@ struct CXMLReader::SImplementation{
     std::shared_ptr< CDataSource > DDataSource;
     XML_Parser DXMLParser;
 
-    void XML_StartElementHandler(void *userData, const XML_Char *name, const XML_Char **atts);
+    void XML_StartElementHandlerCallBack(void *userData, const XML_Char *name, const XML_Char **atts);
 
     SImplementation(std::shared_ptr< CDataSource > src){
         DDataSource = src;

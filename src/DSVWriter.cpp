@@ -1,4 +1,4 @@
-#include "DSCWriter.h"
+#include "DSVWriter.h"
 
 struct CDSVWriter::SImplmentation{
     SImplementation(std::shared_ptr<CDataSink> sink, char delimiter, bool quoteall) {

@@ -2,7 +2,7 @@
 #include <expat.h>
 #include <queue>
 
-CSMLWriter(std::shared_ptr<CDataSink> sink);
+CXMLWriter(std::shared_ptr<CDataSink> sink);
 
 ~CXMLWriter();
 

@@ -1,5 +1,7 @@
 #include "DSVWriter.h"
 
+// change
+
 struct CDSVWriter::SImplmentation{
     SImplementation(std::shared_ptr<CDataSink> sink, char delimiter, bool quoteall) {
         //Details here

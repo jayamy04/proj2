@@ -9,7 +9,7 @@ struct CDSVWriter::SImplmentation{
         
     }
 };
-        std::unique_ptr<SImplementation> DImplmentation;
+        
 
 CDSVWriter::CDSVWriter(std::shared_ptr<CDataSink> sink, char delimiter, bool quoteall) {
     DImplementation = std::make_unique<SImplementation> (sink,delimiter,quoteall);

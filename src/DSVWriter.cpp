@@ -6,7 +6,7 @@ struct CDSVWriter::SImplmentation{
     }
 
     bool WriteRow(const std::vector<std::string> &row){
-
+        
     }
 };
         std::unique_ptr<SImplementation> DImplmentation;

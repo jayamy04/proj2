@@ -2,7 +2,7 @@
 
 Student 1: Kalon (Cecelia) Moco (919570223)
 
-Student 2: Partner2 Name (123456987)
+Student 2: Amy Lee (918477990)
 
 ## Project Status
 We are not yet done with this project but we are close and hoping to finsh as soonas possible

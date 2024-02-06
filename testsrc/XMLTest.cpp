@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "XMLWriter.h"
+#include "XMLReader.h"
 #include "StringDataSource.h"
 
 TEST(XMLWriter, ) {

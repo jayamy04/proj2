@@ -3,7 +3,7 @@
 #include <queue>
 
 
-
+//most recent edits: 2/18/24 @ 2 ish
 
 //be warned: making lots of comments to aid in my understanding :)
 
@@ -32,11 +32,18 @@ struct CXMLReader::SImplementation{              //SImplementation structure wit
 
 
     void EndElementHandler(const std::string &name) {
+        SXMLEntity TempEntity;
+        TempEntity.DNameData = name;
+        TempEntity.DType = SXMLEntity::EType::EndElement;
+        DEntityQueue.push(TempEntity);
 
     }
 
     void CharacterDataHandler(const std::string &cdata) {
-
+        SXMLEntity TempEntity;
+        TempEntity.DNameData = cdata;
+        TempEntity.Dtype = SXMLEntity::EType::CharData;
+        DEntityQueue.push(TempEntity);
     }
 
 
@@ -88,19 +95,19 @@ struct CXMLReader::SImplementation{              //SImplementation structure wit
 
 
 
-    bool End() const{
-
+    bool CXMLReader::End() const{
+        // attempt 1: return DDataSource->End() && DEntityQueue.empty();
+        return DImplementation->End();
     };
 
 
 
-//reads an XML entity from the XML source
-//reads from DDataSource and passes it to XML_parse function and then fills the DEntityQueue
-//if the queue is not empty, it returns the front entity and removes it from the queue
+    //reads an XML entity from the XML source
+    //reads from DDataSource and passes it to XML_parse function and then fills the DEntityQueue
+    //if the queue is not empty, it returns the front entity and removes it from the queue
     bool ReadEntity(SXMLEntity &entity, bool skipcdata){
-        // Reader from source if necessary
-        // pass to XML_Parse function
-        // Return entity
+        std::string DataBuffer;
+
         while(DEntityQueue.empty()) {
             if(DDataSource->Read(DataBuffer,256)) {
                 XML_Parse(DXMLParser,DataBuffer.size()<256);
